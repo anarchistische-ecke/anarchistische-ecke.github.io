@@ -34,21 +34,6 @@ body {
   border-radius: 4px;
 }
 
-/* Contact form */
-#contact {
-  margin: 3rem 0;
-}
-
-#contact input[type="email"] {
-  padding: 0.5rem;
-  width: 200px;
-}
-
-#contact button {
-  padding: 0.5rem 1rem;
-  margin-left: 0.5rem;
-}
-
 /* Footer */
 footer {
   font-size: 0.9rem;
