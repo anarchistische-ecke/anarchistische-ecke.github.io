@@ -1,0 +1,73 @@
+/* terms.css */
+
+/* 1. Container centered with max-width */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* 2. Header styling */
+.page-header h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* 3. Two‑column layout */
+.content-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Sidebar/TOC */
+.sidebar {
+  flex: 1 1 200px;      /* min 200px, grow */
+  max-width: 300px;
+}
+.toc-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.toc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.toc-list a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Main content */
+.terms-content {
+  flex: 3 1 400px;      /* min 400px, grow */
+}
+.terms-content section {
+  margin-bottom: 2rem;
+}
+.terms-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.terms-content p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* 4. Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column;
+  }
+  .sidebar {
+    max-width: none;
+  }
+}
