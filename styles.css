@@ -1,6 +1,64 @@
-/* --- предыдущие стили оставляем без изменений --- */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
 
-/* ================== Исправлено: контайнер маленьких товаров ================== */
+/* Шапка сайта */
+.site-header {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+.site-header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.site-header .tagline {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Секция товаров */
+.products {
+  padding: 2rem 1rem;
+}
+.products h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  width: 300px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.product-image img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+.product h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+.product p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
 .small-product-list {
   display: grid;
   grid-template-columns: repeat(4, 180px);
@@ -11,7 +69,6 @@
   /* Добавлено: центрируем контейнер в родителе */
   margin: 2rem auto 0;
 }
-/* ================== Конец исправления ================== */
 
 .product-small {
   background-color: #fff;
@@ -31,7 +88,6 @@
   border-radius: 4px;
   margin-bottom: 0.5rem;
 }
-/* Конец добавления */
 
 .product-small h4 {
   margin: 0.25rem 0;
@@ -48,11 +104,25 @@
   margin-top: 0.5rem;
 }
 
-/* --- оставляем блок условий и футер без изменений --- */
+.site-footer {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+}
 
 /* ================== Исправление: медиазапрос ================== */
 @media (max-width: 600px) {
-  /* ... стили для основных товаров ... */
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product {
+    width: 100%;
+    max-width: 400px;
+  }
 
   .small-product-list {
     grid-template-columns: 1fr;  /* в одну колонку на мобильных */
@@ -62,4 +132,3 @@
     margin: 0 auto;              /* выровнять по центру */
   }
 }
-/* ================== Конец медиазапроса ================== */
