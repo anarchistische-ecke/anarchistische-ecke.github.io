@@ -1,42 +1,101 @@
-/* Reset a bit */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
+/* Сброс отступов и базовые стили */
 body {
-  font-family: sans-serif;
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
   color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* Шапка сайта */
+.site-header {
+  padding: 2rem 1rem;
   text-align: center;
-  padding: 1rem;
+  background-color: #fff;
 }
-
-/* Hero section */
-.hero {
-  padding: 4rem 1rem;
-  background: #f4f4f4;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
+.site-header h1 {
   margin-bottom: 0.5rem;
+  font-size: 2rem;
 }
-
-.hero p {
+.site-header .tagline {
+  color: #666;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #007bff;
-  color: white;
-  text-decoration: none;
+/* Секция товаров */
+.products {
+  padding: 2rem 1rem;
+}
+.products h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  width: 300px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.product-image img {
+  max-width: 100%;
   border-radius: 4px;
 }
-
-/* Footer */
-footer {
+.product h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+.product p {
   font-size: 0.9rem;
+  color: #555;
+}
+
+/* Блок условий доставки */
+.terms {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  border-top: 1px solid #ddd;
+}
+.terms h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+.terms p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Футер */
+.site-footer {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
   color: #666;
-  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product {
+    width: 100%;
+    max-width: 400px;
+  }
 }
