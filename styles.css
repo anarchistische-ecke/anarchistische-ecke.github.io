@@ -60,6 +60,39 @@ body {
   color: #555;
 }
 
+/* Добавлено: стили для 6 небольших товаров */
+.small-product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+.product-small {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  width: 180px; /* уменьшенная ширина */
+  box-sizing: border-box;
+  text-align: center;
+}
+.product-small h4 {
+  margin: 0.25rem 0;
+  font-size: 1rem; /* чуть меньший шрифт */
+}
+.product-small p {
+  margin: 0.25rem 0;
+  font-size: 0.8rem;
+  color: #555;
+}
+.product-small .price {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+/* Конец добавленных стилей */
+
 /* Блок условий доставки */
 .terms {
   background-color: #fff;
@@ -97,5 +130,14 @@ body {
   .product {
     width: 100%;
     max-width: 400px;
+  }
+  /* Добавлено: адаптив для маленьких товаров */
+  .small-product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-small {
+    width: 100%;
+    max-width: 250px;
   }
 }
