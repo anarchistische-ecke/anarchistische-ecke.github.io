@@ -66,12 +66,11 @@ body {
   grid-template-columns: repeat(4, 180px);
   gap: 0.75rem;
   /* Упаковка по ширине грид-треков */
-  width: max-content;
+  width: max-content;      /* ИСПРАВЛЕНО */
   /* Центрирование контейнера */
-  margin: 2rem auto 0;
+  margin: 2rem auto 0;      /* ИСПРАВЛЕНО */
 }
 
-/* Стили для карточек маленьких товаров */
 .product-small {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -96,11 +95,18 @@ body {
 }
 
 /* ========== Стили для карусели в маленьких карточках ========== */
+/* ИСПРАВЛЕНО: перенесли overflow:hidden на новый контейнер */
 .product-small .carousel-wrapper {
   position: relative;
-  overflow: hidden;
-  width: 100%; /* занимать всю ширину карточки */
+  /* overflow: hidden;  <- убрано */
+  width: 100%;
 }
+/* ИСПРАВЛЕНО: новый контейнер для обрезки */
+.product-small .carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+/* Сама карусель */
 .product-small .carousel {
   display: flex;
   flex-wrap: nowrap;
@@ -112,23 +118,21 @@ body {
   height: auto;
   border-radius: 4px;
 }
-.product-small .carousel-wrapper .prev,
-.product-small .carousel-wrapper .next {
+/* Стрелки */
+.product-small .prev,
+.product-small .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255,255,255,0.7);
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.2rem 0.5rem;
+  z-index: 10;
 }
-.product-small .carousel-wrapper .prev {
-  left: 0.5rem;
-}
-.product-small .carousel-wrapper .next {
-  right: 0.5rem;
-}
+.product-small .prev { left: 0.5rem; }
+.product-small .next { right: 0.5rem; }
 /* ========== Конец стилей карусели ========== */
 
 /* Блок условий доставки */
