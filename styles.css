@@ -10,10 +10,22 @@ body {
 
 /* Шапка сайта */
 .site-header {
+  position: relative; /* Делаем шапку точкой отсчета для абсолютного позиционирования */
   padding: 2rem 1rem;
   text-align: center;
   background-color: #fff;
 }
+
+.header-inner {
+  display: flex;
+  flex-direction: column; /* Меняем направление flex на колонку */
+  align-items: center;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .site-header h1 {
   margin-bottom: 0.5rem;
   font-size: 2rem;
@@ -22,6 +34,116 @@ body {
   color: #666;
   font-size: 1.2rem;
 }
+
+.header-left {
+  flex: 1; /* пустая колонка слева */
+}
+
+.site-brand {
+  flex: 1;
+  text-align: center; /* название по центру */
+}
+
+.contact-actions {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* прижать вправо */
+  gap: 0.6rem;
+}
+
+.contact-actions {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  z-index: 100;
+}
+
+.site-brand {
+  flex: 0 0 auto;
+}
+
+/* Телефон */
+.phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  color: #0b3b66;
+  font-weight: 600;
+  padding: 0.25rem 0.45rem;
+  border-radius: 6px;
+}
+.phone-link:hover { background: rgba(11,59,102,0.06); }
+.phone-icon { display:block; color: #0b3b66; }
+
+/* WhatsApp */
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: white;
+  background: #25D366;
+  padding: 0.28rem 0.55rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(37,211,102,0.18);
+}
+.whatsapp-link:hover { filter: brightness(0.95); }
+.whatsapp-icon { display:block; width:18px; height:18px; }
+
+/* Тексты возле иконок */
+.phone-text, .whatsapp-text { display: inline-block; }
+
+/* На узких экранах скрываем текст, оставляем только иконки */
+@media (max-width: 520px) {
+  .phone-text, .whatsapp-text { display: none; }
+  .site-brand .tagline { display: none; } /* опционально: скрыть слоган */
+  .header-inner { padding: 0 0.6rem; }
+}
+
+/* Телефон */
+.phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  color: #0b3b66;
+  font-weight: 600;
+  padding: 0.25rem 0.45rem;
+  border-radius: 6px;
+}
+.phone-link:hover { background: rgba(11,59,102,0.06); }
+.phone-icon { display:block; color: #0b3b66; }
+
+/* WhatsApp */
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: white;
+  background: #25D366;
+  padding: 0.28rem 0.55rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(37,211,102,0.18);
+}
+.whatsapp-link:hover { filter: brightness(0.95); }
+.whatsapp-icon { display:block; width:18px; height:18px; }
+
+/* Тексты возле иконок */
+.phone-text, .whatsapp-text { display: inline-block; }
+
+/* На узких экранах скрываем текст, оставляем только иконки */
+@media (max-width: 520px) {
+  .phone-text, .whatsapp-text { display: none; }
+  .site-brand .tagline { display: none; } /* опционально: скрыть слоган */
+  .header-inner { padding: 0 0.6rem; }
+}
+
 
 /* О компании */
 .about {
@@ -142,6 +264,117 @@ body {
 }
 .product-small .prev { left: 0.5rem; }
 .product-small .next { right: 0.5rem; }
+
+.callback-section {
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: 1.25rem auto;
+}
+.callback-card {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(20,20,20,0.04);
+  align-items: center;
+}
+.callback-info h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.35rem;
+}
+.callback-info p {
+  margin: 0 0 0.75rem 0;
+  color: #444;
+}
+.callback-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem 0;
+}
+.callback-bullets li {
+  margin: 0.35rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+.callback-note {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Форма callback */
+.callback-form {
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+.callback-form .form-row {
+  margin-bottom: 0.6rem;
+}
+.callback-form label {
+  display: block;
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+.callback-form input[type="text"],
+.callback-form input[type="tel"],
+.callback-form select,
+.callback-form textarea {
+  width: 100%;
+  padding: 0.55rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+.callback-form input:focus,
+.callback-form select:focus,
+.callback-form textarea:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.08);
+}
+.form-privacy {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.form-privacy label {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.form-actions {
+  text-align: right;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 0.55rem 0.9rem;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #0062d6;
+}
+
+/* Сообщение об успехе */
+.callback-success {
+  margin-top: 0.6rem;
+  padding: 0.6rem;
+  background: #e6f7ef;
+  border: 1px solid #c7eed6;
+  color: #1f6f4b;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  text-align: center;
+}
 
 /* Блок условий доставки */
 .terms {
@@ -288,4 +521,63 @@ body {
     max-width: 250px;
     margin: 0 auto;
   }
+
+  /* === FIX: прижать контакты вправо и убедиться, что WhatsApp-иконка видна === */
+.header-inner { position: relative; } /* безопасно — не нарушает flex */
+
+.contact-actions {
+  /* важное: прижать к правой стороне контейнера */
+  margin-left: auto !important;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  z-index: 50;
+}
+
+/* Убедиться, что SVG-иконки видны и имеют нужный размер */
+.phone-icon, .whatsapp-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+/* Если в SVG путь не окрашивается, принудительно задаём цвет */
+.whatsapp-icon path { fill: #ffffff !important; }
+.phone-icon path     { fill: currentColor !important; }
+
+/* Мобильное поведение — скрываем текст, оставляем иконки */
+@media (max-width: 520px) {
+  .phone-text, .whatsapp-text { display: none !important; }
+  .header-inner { padding: 0 0.6rem; }
+  /* если используете абсолютное позиционирование, подвиньте чуть левее */
+  .contact-actions[style] { right: 0.6rem; }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    padding-top: 3rem; /* Добавляем отступ сверху для контактных элементов */
+  }
+  
+  .contact-actions {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 520px) {
+  .phone-text, .whatsapp-text { 
+    display: none !important; 
+  }
+  
+  .contact-actions {
+    gap: 0.3rem;
+  }
+  
+  .phone-link,
+  .whatsapp-link {
+    padding: 0.4rem;
+  }
+}
+
 }
