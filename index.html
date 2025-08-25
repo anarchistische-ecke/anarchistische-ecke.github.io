@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Магазин постельного белья Девятое Облако</title>
+  <title>Постельное Белье-Юг</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
   <div class="header-inner">
     <div class="site-brand">
-      <h1>Магазин постельного белья Девятое Облако</h1>
+      <h1>Постельное Белье-Юг</h1>
       <p class="tagline">Надежное качество и уютный сон — ваш выбор у нас!</p>
     </div>
 
@@ -392,9 +392,7 @@
     <div class="modal-content">
       <span class="close-btn">&times;</span>
       <h2 style="text-align:center;">Контакты</h2>
-      <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 1</p>
-      <p><strong>Телефон:</strong> +7 (900) 000-00-00</p>
-      <p><strong>Режим работы:</strong> Пн–Пт: 9:00–18:00</p>
+      <p><strong>Телефон:</strong> +7 (962) 000-11-92</p>
       <h3>Напишите нам:</h3>
       <form id="contact-form">
         <div><input type="text" id="name" name="name" placeholder="Ваше имя" required></div>
@@ -419,63 +417,71 @@
   </div>
 
 <!-- ====== Блок: Заказать звонок (callback) ====== -->
-    <section class="callback-section" aria-labelledby="callback-title">
-      <div class="callback-card">
-        <div class="callback-info">
-          <h2 id="callback-title">Заказать звонок</h2>
-          <p>Оставьте свои контактные данные — менеджер свяжется с вами в удобное время.</p>
-          <ul class="callback-bullets">
-            <li>Быстрый ответ в рабочее время</li>
-            <li>Консультация по наличию и размерам</li>
-            <li>Бесплатный звонок</li>
-          </ul>
-          <p class="callback-note">Мы используем ваши данные только для обработки запроса. Подробнее — в <a href="#" id="privacy-link-inline">Политике конфиденциальности</a>.</p>
-        </div>
+<section class="callback-section" aria-labelledby="callback-title">
+  <div class="callback-card">
+    <div class="callback-info">
+      <h2 id="callback-title">Получить консультацию или каталог</h2>
+      <p>Оставьте свои контактные данные, и наш менеджер свяжется с вами для:</p>
+      <ul class="callback-bullets">
+        <li>Консультации по выбору постельного белья и текстиля</li>
+        <li>Помощи с оформлением заказа</li>
+        <li>Отправки полного каталога нашей продукции</li>
+      </ul>
+      <p class="callback-note">Мы используем ваши данные исключительно для обработки запроса. Подробнее — в <a href="#" id="privacy-link-inline">Политике конфиденциальности</a>.</p>
+    </div>
 
-        <form id="callback-form" class="callback-form" novalidate>
-          <div class="form-row">
-            <label for="cb-name">Имя</label>
-            <input type="text" id="cb-name" name="name" placeholder="Иван" required>
-          </div>
-          <div class="form-row">
-            <label for="cb-phone">Телефон</label>
-            <input type="tel" id="cb-phone" name="phone" placeholder="+7 (900) 000-00-00" required>
-          </div>
-          <div class="form-row">
-            <label for="cb-time">Удобное время</label>
-            <select id="cb-time" name="time">
-              <option value="">Любое время</option>
-              <option>09:00–12:00</option>
-              <option>12:00–15:00</option>
-              <option>15:00–18:00</option>
-            </select>
-          </div>
-          <div class="form-row form-privacy">
-            <input type="checkbox" id="cb-consent" required>
-            <label for="cb-consent">Согласен(а) на обработку персональных данных</label>
-          </div>
-          <div class="form-row form-actions">
-            <button type="submit" class="btn-primary">Заказать звонок</button>
-          </div>
-
-          <div id="cb-success" class="callback-success" role="status" aria-live="polite" hidden>
-            Спасибо! Менеджер свяжется с вами в ближайшее время.
-          </div>
-        </form>
+    <form id="callback-form" class="callback-form" novalidate>
+      <div class="form-row">
+        <label for="cb-name">Имя</label>
+        <input type="text" id="cb-name" name="name" placeholder="Ваше имя" required>
       </div>
-    </section>
+      <div class="form-row">
+        <label for="cb-phone">Телефон</label>
+        <input type="tel" id="cb-phone" name="phone" placeholder="+7 (900) 000-00-00" required>
+      </div>
+      <div class="form-row">
+        <label for="cb-purpose">Цель обращения</label>
+        <select id="cb-purpose" name="purpose">
+          <option value="">Выберите вариант</option>
+          <option>Консультация по товарам</option>
+          <option>Оформление заказа</option>
+          <option>Получить каталог продукции</option>
+          <option>Уточнить наличие</option>
+          <option>Другое</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="cb-time">Удобное время для звонка</label>
+        <select id="cb-time" name="time">
+          <option value="">Любое время</option>
+          <option>09:00–12:00</option>
+          <option>12:00–15:00</option>
+          <option>15:00–18:00</option>
+        </select>
+      </div>
+      <div class="form-row form-privacy">
+        <input type="checkbox" id="cb-consent" required>
+        <label for="cb-consent">Согласен(а) на обработку персональных данных</label>
+      </div>
+      <div class="form-row form-actions">
+        <button type="submit" class="btn-primary">Отправить запрос</button>
+      </div>
 
-  <section class="terms">
-    <h2>Условия доставки и продаж</h2>
-    <p>Доставка осуществляется транспортной компанией СДЕК в соответствии со 
-сроками и тарифами транспортной компании. <a href="#" id="return-link">Правила обмена и возврата</a>.</p>
-  </section>
+      <div id="cb-success" class="callback-success" role="status" aria-live="polite" hidden>
+        Спасибо! Ваш запрос принят. Менеджер свяжется с вами в ближайшее время.
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="terms">
+  <h2>Условия доставки и продаж</h2>
+  <p>Доставка осуществляется транспортной компанией СДЕК в соответствии со сроками и тарифами транспортной компании. <a href="#" id="return-link">Правила обмена и возврата</a>.</p>
+</section>
   
+  <!-- ПОДВВАЛ -->
   <footer class="site-footer">
-    <p>Продавец: ИП Белоусова</p>
-    <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
-    <p>Телефон: +7 (900) 000-00-00</p>
-    <p>Режим работы: Пн–Пт: 9:00–18:00</p>
+    <p>Продавец: ИП Белоусова Валентина Сергеевна</p>
     <p><a href="#" id="privacy-link">Политика конфиденциальности</a> | <a href="#" id="contact-link">Контакты</a> | <a href="about.html">О нас</a></p>
   </footer>
 
@@ -505,15 +511,26 @@
   </script>
 
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Политика конфиденциальности
     const privacyLink = document.getElementById('privacy-link');
+    const privacyLinkInline = document.getElementById('privacy-link-inline');
     const privacyModal = document.getElementById('privacy-modal');
     const privacyClose = privacyModal.querySelector('.close-btn');
+    
     privacyLink.addEventListener('click', e => {
       e.preventDefault();
       privacyModal.style.display = 'block';
     });
+    
+    // Обработчик для ссылки в блоке заказа звонка
+    if (privacyLinkInline) {
+        privacyLinkInline.addEventListener('click', e => {
+            e.preventDefault();
+            privacyModal.style.display = 'block';
+        });
+    }
+    
     privacyClose.addEventListener('click', () => {
       privacyModal.style.display = 'none';
     });
@@ -566,8 +583,8 @@
       localStorage.setItem('cookieAccepted', 'yes');
       cookieBanner.style.display = 'none';
     });
-  });
-  </script>
+});
+</script>
 
 <script>
 // === Callback (Заказать звонок) ===
